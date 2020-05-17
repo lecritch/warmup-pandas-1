@@ -14,6 +14,29 @@ Because of this Video Gambling is a frequent issue voted on by municipal governm
 ```python
 # Run this cell unchanged
 
+# if you get a long error msg:
+# - restart the kernal 
+# (click the circular arrow icon right below the tab for the notebook)
+# - make a new cell above this one and import pandas as pd there
+
+import pandas as pd
+from IPython.display import display, Markdown
+
+def markdown(text):
+    display(Markdown(text))
+```
+
+
+```python
+# __SOLUTION__
+
+# Run this cell unchanged
+
+# if you get a long error msg:
+# - restart the kernal 
+# (click the circular arrow icon right below the tab for the notebook)
+# - make a new cell above this one and import pandas as pd there
+
 import pandas as pd
 from IPython.display import display, Markdown
 
@@ -33,7 +56,7 @@ It is titled ```2019-il-vgambling.csv```
 
 ```python
 path = None
-df = pd.read_csv(path)
+data = pd.read_csv(path)
 ```
 
 
@@ -41,6 +64,8 @@ df = pd.read_csv(path)
 # __SOLUTION__
 path = './data/2019-il-vgambling.csv'
 data = pd.read_csv(path)
+
+data
 ```
 
 **Ok,** let's print out the first 5 rows using the ```.head()``` method.
@@ -183,7 +208,109 @@ pop = pd.read_csv(path)
 # __SOLUTION__
 path = './data/population.csv'
 pop = pd.read_csv(path)
+
+pop
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Municipality</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>Champaign</td>
+      <td>86,791</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>Carbondale</td>
+      <td>25,846</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>Prairie Grove</td>
+      <td>1,826</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>Macomb</td>
+      <td>18,118</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>Brimfield</td>
+      <td>965</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>830</td>
+      <td>830</td>
+      <td>Metamora</td>
+      <td>3,835</td>
+    </tr>
+    <tr>
+      <td>831</td>
+      <td>831</td>
+      <td>Altamont</td>
+      <td>2,260</td>
+    </tr>
+    <tr>
+      <td>832</td>
+      <td>832</td>
+      <td>Fulton</td>
+      <td>3,302</td>
+    </tr>
+    <tr>
+      <td>833</td>
+      <td>833</td>
+      <td>Alorton</td>
+      <td>1,965</td>
+    </tr>
+    <tr>
+      <td>834</td>
+      <td>834</td>
+      <td>East Peoria</td>
+      <td>22,876</td>
+    </tr>
+  </tbody>
+</table>
+<p>835 rows × 3 columns</p>
+</div>
+
+
 
 **Cool Cool**, let's print out the first 5 rows using the ```.head()``` method.
 
@@ -273,7 +400,7 @@ We need to merge our two datasets.
 **When merging** datasets, it's important to check the length of our datasets before and after merging to make sure we are not losing too much data.
 
 <u>In the cell below:</u>
-1. Set the variable ```length_before_merge``` to the length of our ```data``` variable using python's built in ```len``` function
+1. Set the variable ```length_before_merge``` to the length of our ```df``` dataframe using python's built in ```len``` function
 
 
 ```python
@@ -319,6 +446,7 @@ markdown(string)
 ```python
 # __SOLUTION__
 df = pd.merge(data, pop, on = 'Municipality')
+df
 ```
 
 Now we need to check the length of our dataframe to make sure we didn't lose data! 
@@ -363,6 +491,7 @@ In the cell below, set the Municipality column as the index using the ```.set_in
 ```python
 # __SOLUTION__
 df.set_index('Municipality', drop=True, inplace = True)
+df
 ```
 
 Let's sort our index alphabetically using [this](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_index.html) method.
@@ -376,6 +505,7 @@ Let's sort our index alphabetically using [this](https://pandas.pydata.org/panda
 ```python
 # __SOLUTION__
 df.sort_index(inplace = True)
+df
 ```
 
 To make things easier on ourselves, let's reformat our column names.
@@ -395,6 +525,7 @@ To make things easier on ourselves, let's reformat our column names.
 ```python
 # __SOLUTION__
 df.columns = [x.lower().replace(' ', '_') for x in df.columns]
+df
 ```
 
 <center><i><h1>So much cleaning</h1></i></center>
@@ -456,6 +587,7 @@ Our ```population``` column contains commas which is causing the computer to int
 ```python
 #__SOLUTION__
 df.population = df.population.apply(lambda x: int(x.replace(',', '')))
+df
 ```
 
 # Cleaning Complete!
@@ -479,6 +611,7 @@ Let's create a column that shows the number of gambling terminals per capita!
 ```python
 # __SOLUTION__
 df['terminals_percapita'] = df.terminal_count/df.population
+df
 ```
 
 Now let's identify which communities have the highest number of gambling devices per capita. 
@@ -499,10 +632,15 @@ Now let's identify which communities have the highest number of gambling devices
 ```python
 # __SOLUTION__
 
-highest_machines_percapita = df.sort_values(by='terminals_percapita', ascending=False)\
-                                                                                .head(10)\
-                                                                                .index
+highest_machines_percapita = \
+    df.sort_values \
+    (by='terminals_percapita', 
+     ascending=False)\
+    .head(10)\
+    .index
+
 highest_machines_percapita = list(highest_machines_percapita)
+highest_machines_percapita
 ```
 
 Run the cell below to see if you identified the correct Municipalities!
@@ -527,6 +665,7 @@ Run the cell below to see if you identified the correct Municipalities!
 ```python
 # __SOLUTION__
 df['amount_lost'] = df.amount_played - df.amount_won
+df
 ```
 
 <u>In the cell below:</u>
@@ -564,6 +703,7 @@ Let's zoom in on this new loss data.
 ```python
 # __SOLUTION__
 df['loss_percapita'] = df.amount_lost / df.population
+df
 ```
 
 <u>In the cell below</u>
@@ -578,7 +718,15 @@ highest_loss_percapita = None
 
 ```python
 # __SOLUTION__
-highest_loss_percapita = list(df.sort_values(by='loss_percapita', ascending = False).head(10).index)
+highest_loss_percapita = list(
+    df
+    .sort_values(
+        by='loss_percapita', 
+        ascending = False
+    )
+    .head(10)
+    .index
+)
 ```
 
 Run the cell below to see if you idenitified the correct municipalities!
@@ -612,8 +760,24 @@ Run the cell below to see if you idenitified the correct municipalities!
 # __SOLUTION__
 high_loss_percapita = df[df.loss_percapita >= 406]
 low_loss_percapita = df[df.loss_percapita <= 155]
-high_loss_average_population = np.round(high_loss_percapita.population.mean(), 2)
-low_loss_average_population = np.round(low_loss_percapita.population.mean(), 2)
+high_loss_average_population = (
+    np.round(
+        high_loss_percapita
+        .population
+        .mean()
+        , 2
+    )
+)
+
+low_loss_average_population = (
+    np.round(
+        low_loss_percapita
+        .population
+        .mean()
+        , 2)
+)
+
+
 ```
 
 Run the cell below to see if you identified the correct averages!
