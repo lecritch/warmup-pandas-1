@@ -512,16 +512,6 @@ Run the cell below to see if you identified the correct Municipalities!
 ######################### TEST HERE
 ```
 
-- Find the 10 cities with the highest machines per capita
-- Find the 10 cities with the most machines
-- Calculate the average amount of money lost as an integer
-- Highest Loss percapita
-
-
-```python
-df.head()
-```
-
 **Next,** let's figure out how much money players lost for each municipality.
 
 <u>In the cell below:</u>
