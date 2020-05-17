@@ -1,4 +1,3 @@
-
 # Video Gambling Data and Pandas 🧐
 <img src="https://media.tegna-media.com/assets/WQAD/images/01c4abef-ca79-4b9b-b3f7-2ad2e856b34b/01c4abef-ca79-4b9b-b3f7-2ad2e856b34b_750x422.jpg" width="460"/>
 
@@ -15,11 +14,20 @@ Because of this Video Gambling is a frequent issue voted on by municipal governm
 ```python
 # Run this cell unchanged
 
+# if you get a long error msg:
+# - restart the kernal 
+# (click the circular arrow icon right below the tab for the notebook)
+# - make a new cell above this one and import pandas as pd there
+
 import pandas as pd
 from IPython.display import display, Markdown
 
 def markdown(text):
     display(Markdown(text))
+
+#used for tests
+from test_background import pkl_dump, test_dict, run_test
+import numpy as np
 ```
 
 **Our data is located** within the ```data``` folder of this repo.
@@ -28,12 +36,13 @@ It is titled ```2019-il-vgambling.csv```
 
 <u>In the cell below:</u> 
 1. Set the ```path``` variable to the path ```./data/2019-il-vgambling.csv```. 
+    - (reverse the slashes if you're on Windows)
 2. Run the cell to import our dataset.
 
 
 ```python
 path = None
-df = pd.read_csv(path)
+data = pd.read_csv(path)
 ```
 
 **Ok,** let's print out the first 5 rows using the ```.head()``` method.
@@ -91,7 +100,7 @@ We need to merge our two datasets.
 **When merging** datasets, it's important to check the length of our datasets before and after merging to make sure we are not losing too much data.
 
 <u>In the cell below:</u>
-1. Set the variable ```length_before_merge``` to the length of our ```data``` variable using python's built in ```len``` function
+1. Set the variable ```length_before_merge``` to the length of our ```df``` dataframe using python's built in ```len``` function
 
 
 ```python
@@ -103,6 +112,10 @@ length_before_merge = None
 string = '''<u>Length before merge:</u> **{}**'''.format(length_before_merge)
 markdown(string)
 ```
+
+
+<u>Length before merge:</u> **None**
+
 
 *Merge Time*
 
@@ -132,6 +145,10 @@ length_after_merge = None
 string = '''<u>Length after merge:</u> **{}**'''.format(length_after_merge,)
 markdown(string)
 ```
+
+
+<u>Length after merge:</u> **None**
+
 
 In the cell below, set the Municipality column as the index using the ```.set_index()``` method.
 
@@ -230,8 +247,15 @@ Run the cell below to see if you identified the correct Municipalities!
 
 
 ```python
-######################### TEST HERE
+run_test(highest_machines_percapita, 'highest_machines_percapita')
 ```
+
+
+
+
+    'Hey, you did it.  Good job.'
+
+
 
 **Next,** let's figure out how much money players lost for each municipality.
 
@@ -280,8 +304,15 @@ Run the cell below to see if you idenitified the correct municipalities!
 
 
 ```python
-######################### TEST HERE
+run_test(highest_loss_percapita, 'highest_loss_percapita')
 ```
+
+
+
+
+    'Hey, you did it.  Good job.'
+
+
 
 <u>In the cell below:</u>
 1. Filter our dataframe to contain municipalities with a ```loss_percapita``` of 406 or greater. 
@@ -306,5 +337,15 @@ Run the cell below to see if you identified the correct averages!
 
 
 ```python
-######################### TEST HERE
+high_result = run_test(high_loss_average_population, 'high_loss_average_population')
+low_result = run_test(low_loss_average_population, 'low_loss_average_population')
+
+print(f'high loss test result: {high_result}')
+print
+print(f'low loss test result: {low_result}')
+```
+
+
+```python
+
 ```
