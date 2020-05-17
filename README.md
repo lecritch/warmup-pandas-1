@@ -11,17 +11,6 @@ Because of this Video Gambling is a frequent issue voted on by municipal governm
 
 **Let's use our skills with Pandas to investigate this topic.**
 
-
-```python
-# Run this cell unchanged
-
-import pandas as pd
-from IPython.display import display, Markdown
-
-def markdown(text):
-    display(Markdown(text))
-```
-
 **Our data is located** within the ```data``` folder of this repo.
 
 It is titled ```2019-il-vgambling.csv```
@@ -32,13 +21,6 @@ It is titled ```2019-il-vgambling.csv```
 
 
 ```python
-path = None
-df = pd.read_csv(path)
-```
-
-
-```python
-# __SOLUTION__
 path = './data/2019-il-vgambling.csv'
 data = pd.read_csv(path)
 ```
@@ -47,12 +29,6 @@ data = pd.read_csv(path)
 
 
 ```python
-# Your code here
-```
-
-
-```python
-# __SOLUTION__
 data.head()
 ```
 
@@ -174,13 +150,6 @@ In the cell below:
 
 
 ```python
-path = None
-pop = pd.read_csv(path)
-```
-
-
-```python
-# __SOLUTION__
 path = './data/population.csv'
 pop = pd.read_csv(path)
 ```
@@ -189,12 +158,6 @@ pop = pd.read_csv(path)
 
 
 ```python
-# Your Code here
-```
-
-
-```python
-# __SOLUTION__
 pop.head()
 ```
 
@@ -263,11 +226,6 @@ pop.head()
 
 Let's remove the ```Unnamed: 0``` column.
 
-
-```python
-pop.drop('Unnamed: 0', axis = 1, inplace = True)
-```
-
 We need to merge our two datasets. 
 
 **When merging** datasets, it's important to check the length of our datasets before and after merging to make sure we are not losing too much data.
@@ -277,18 +235,6 @@ We need to merge our two datasets.
 
 
 ```python
-# Your code here
-length_before_merge = None
-
-
-# Run Code below without change
-string = '''<u>Length before merge:</u> **{}**'''.format(length_before_merge)
-markdown(string)
-```
-
-
-```python
-# __SOLUTION__
 length_before_merge = len(data)
 
 
@@ -311,13 +257,6 @@ markdown(string)
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df = pd.merge(data, pop, on = 'Municipality')
 ```
 
@@ -328,18 +267,6 @@ Now we need to check the length of our dataframe to make sure we didn't lose dat
 
 
 ```python
-# Your code here
-length_after_merge = None
-
-
-# Run Code below without change
-string = '''<u>Length after merge:</u> **{}**'''.format(length_after_merge,)
-markdown(string)
-```
-
-
-```python
-# __SOLUTION__
 length_after_merge = len(df)
 
 # Run Code below without change
@@ -355,13 +282,6 @@ In the cell below, set the Municipality column as the index using the ```.set_in
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df.set_index('Municipality', drop=True, inplace = True)
 ```
 
@@ -369,12 +289,6 @@ Let's sort our index alphabetically using [this](https://pandas.pydata.org/panda
 
 
 ```python
-# Your code here
-```
-
-
-```python
-# __SOLUTION__
 df.sort_index(inplace = True)
 ```
 
@@ -387,13 +301,6 @@ To make things easier on ourselves, let's reformat our column names.
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df.columns = [x.lower().replace(' ', '_') for x in df.columns]
 ```
 
@@ -412,13 +319,6 @@ Ok Ok, we're almost done formatting our data.
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df.info()
 ```
 
@@ -448,13 +348,6 @@ Our ```population``` column contains commas which is causing the computer to int
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-#__SOLUTION__
 df.population = df.population.apply(lambda x: int(x.replace(',', '')))
 ```
 
@@ -471,13 +364,6 @@ Let's create a column that shows the number of gambling terminals per capita!
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df['terminals_percapita'] = df.terminal_count/df.population
 ```
 
@@ -491,13 +377,6 @@ Now let's identify which communities have the highest number of gambling devices
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 
 highest_machines_percapita = df.sort_values(by='terminals_percapita', ascending=False)\
                                                                                 .head(10)\
@@ -507,20 +386,10 @@ highest_machines_percapita = list(highest_machines_percapita)
 
 Run the cell below to see if you identified the correct Municipalities!
 
-
-```python
-######################### TEST HERE
-```
-
 - Find the 10 cities with the highest machines per capita
 - Find the 10 cities with the most machines
 - Calculate the average amount of money lost as an integer
 - Highest Loss percapita
-
-
-```python
-df.head()
-```
 
 **Next,** let's figure out how much money players lost for each municipality.
 
@@ -529,13 +398,6 @@ df.head()
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 df['amount_lost'] = df.amount_played - df.amount_won
 ```
 
@@ -546,15 +408,6 @@ df['amount_lost'] = df.amount_played - df.amount_won
 
 
 ```python
-# Your code here
-
-average_loss = None
-average_loss_rounded = None
-```
-
-
-```python
-# __SOLUTION__
 
 average_loss = df.amount_lost.mean()
 average_loss_rounded = np.round(average_loss, decimals=2)
@@ -567,12 +420,6 @@ Let's zoom in on this new loss data.
 
 
 ```python
-# Your code here
-```
-
-
-```python
-# __SOLUTION__
 df['loss_percapita'] = df.amount_lost / df.population
 ```
 
@@ -581,22 +428,10 @@ df['loss_percapita'] = df.amount_lost / df.population
 
 
 ```python
-# Your code here
-highest_loss_percapita = None
-```
-
-
-```python
-# __SOLUTION__
 highest_loss_percapita = list(df.sort_values(by='loss_percapita', ascending = False).head(10).index)
 ```
 
 Run the cell below to see if you idenitified the correct municipalities!
-
-
-```python
-######################### TEST HERE
-```
 
 <u>In the cell below:</u>
 1. Filter our dataframe to contain municipalities with a ```loss_percapita``` of 406 or greater. 
@@ -613,13 +448,6 @@ Run the cell below to see if you idenitified the correct municipalities!
 
 
 ```python
-# Your code here
-
-```
-
-
-```python
-# __SOLUTION__
 high_loss_percapita = df[df.loss_percapita >= 406]
 low_loss_percapita = df[df.loss_percapita <= 155]
 high_loss_average_population = np.round(high_loss_percapita.population.mean(), 2)
@@ -627,8 +455,3 @@ low_loss_average_population = np.round(low_loss_percapita.population.mean(), 2)
 ```
 
 Run the cell below to see if you identified the correct averages!
-
-
-```python
-######################### TEST HERE
-```
