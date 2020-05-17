@@ -14,6 +14,11 @@ Because of this Video Gambling is a frequent issue voted on by municipal governm
 ```python
 # Run this cell unchanged
 
+# if you get a long error msg:
+# - restart the kernal 
+# (click the circular arrow icon right below the tab for the notebook)
+# - make a new cell above this one and import pandas as pd there
+
 import pandas as pd
 from IPython.display import display, Markdown
 
@@ -33,7 +38,7 @@ It is titled ```2019-il-vgambling.csv```
 
 ```python
 path = None
-df = pd.read_csv(path)
+data = pd.read_csv(path)
 ```
 
 **Ok,** let's print out the first 5 rows using the ```.head()``` method.
@@ -91,7 +96,7 @@ We need to merge our two datasets.
 **When merging** datasets, it's important to check the length of our datasets before and after merging to make sure we are not losing too much data.
 
 <u>In the cell below:</u>
-1. Set the variable ```length_before_merge``` to the length of our ```data``` variable using python's built in ```len``` function
+1. Set the variable ```length_before_merge``` to the length of our ```df``` dataframe using python's built in ```len``` function
 
 
 ```python
