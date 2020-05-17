@@ -68,43 +68,6 @@ data = pd.read_csv(path)
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    ValueError                                Traceback (most recent call last)
-
-    <ipython-input-96-2984bca98021> in <module>
-          1 path = None
-    ----> 2 data = pd.read_csv(path)
-    
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)
-        683         )
-        684 
-    --> 685         return _read(filepath_or_buffer, kwds)
-        686 
-        687     parser_f.__name__ = name
-
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
-        438     # See https://github.com/python/mypy/issues/1297
-        439     fp_or_buf, _, compression, should_close = get_filepath_or_buffer(
-    --> 440         filepath_or_buffer, encoding, compression
-        441     )
-        442     kwds["compression"] = compression
-
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/common.py in get_filepath_or_buffer(filepath_or_buffer, encoding, compression, mode)
-        222     if not is_file_like(filepath_or_buffer):
-        223         msg = "Invalid file path or buffer object type: {_type}"
-    --> 224         raise ValueError(msg.format(_type=type(filepath_or_buffer)))
-        225 
-        226     return filepath_or_buffer, None, compression, False
-
-
-    ValueError: Invalid file path or buffer object type: <class 'NoneType'>
-
-
-
 ```python
 # __SOLUTION__
 path = './data/2019-il-vgambling.csv'
@@ -407,43 +370,6 @@ In the cell below:
 path = None
 pop = pd.read_csv(path)
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    ValueError                                Traceback (most recent call last)
-
-    <ipython-input-102-d3fd73de5a69> in <module>
-          1 path = None
-    ----> 2 pop = pd.read_csv(path)
-    
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)
-        683         )
-        684 
-    --> 685         return _read(filepath_or_buffer, kwds)
-        686 
-        687     parser_f.__name__ = name
-
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
-        438     # See https://github.com/python/mypy/issues/1297
-        439     fp_or_buf, _, compression, should_close = get_filepath_or_buffer(
-    --> 440         filepath_or_buffer, encoding, compression
-        441     )
-        442     kwds["compression"] = compression
-
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/io/common.py in get_filepath_or_buffer(filepath_or_buffer, encoding, compression, mode)
-        222     if not is_file_like(filepath_or_buffer):
-        223         msg = "Invalid file path or buffer object type: {_type}"
-    --> 224         raise ValueError(msg.format(_type=type(filepath_or_buffer)))
-        225 
-        226     return filepath_or_buffer, None, compression, False
-
-
-    ValueError: Invalid file path or buffer object type: <class 'NoneType'>
-
 
 
 ```python
