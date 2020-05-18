@@ -530,7 +530,7 @@ We need to merge our two datasets.
 **When merging** datasets, it's important to check the length of our datasets before and after merging to make sure we are not losing too much data.
 
 <u>In the cell below:</u>
-1. Set the variable ```length_before_merge``` to the length of our ```df``` dataframe using python's built in ```len``` function
+1. Set the variable ```length_before_merge``` to the length of our ```data``` dataframe using python's built in ```len``` function
 
 
 ```python
