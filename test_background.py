@@ -74,7 +74,7 @@ test_dict = load_test_dict()
 
 
 def run_test(obj, name):
-    name = name+'.pkl'
+
     try:
         if type(obj)==np.ndarray:
             assert np.array_equal(obj, test_dict[name])

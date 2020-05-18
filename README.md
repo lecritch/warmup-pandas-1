@@ -1,3 +1,4 @@
+
 # Video Gambling Data and Pandas 🧐
 <img src="https://media.tegna-media.com/assets/WQAD/images/01c4abef-ca79-4b9b-b3f7-2ad2e856b34b/01c4abef-ca79-4b9b-b3f7-2ad2e856b34b_750x422.jpg" width="460"/>
 
@@ -73,7 +74,7 @@ data = pd.read_csv(path)
 path = './data/2019-il-vgambling.csv'
 data = pd.read_csv(path)
 
-data
+data.head()
 ```
 
 
@@ -109,7 +110,7 @@ data
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>Oregon</td>
       <td>13</td>
       <td>58</td>
@@ -120,7 +121,7 @@ data
       <td>129938.54</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>Oakwood Hills</td>
       <td>1</td>
       <td>4</td>
@@ -131,7 +132,7 @@ data
       <td>847.69</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>Merrionette Park</td>
       <td>4</td>
       <td>17</td>
@@ -142,7 +143,7 @@ data
       <td>112146.00</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>Ashkum</td>
       <td>2</td>
       <td>8</td>
@@ -153,7 +154,7 @@ data
       <td>8829.44</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>Grandview</td>
       <td>5</td>
       <td>25</td>
@@ -163,75 +164,8 @@ data
       <td>328175.50</td>
       <td>61872.51</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>830</td>
-      <td>East Peoria</td>
-      <td>26</td>
-      <td>111</td>
-      <td>52001103.85</td>
-      <td>47625215.85</td>
-      <td>1377742.74</td>
-      <td>1158937.72</td>
-      <td>218805.02</td>
-    </tr>
-    <tr>
-      <td>831</td>
-      <td>Hillcrest</td>
-      <td>1</td>
-      <td>5</td>
-      <td>8276176.37</td>
-      <td>7653443.96</td>
-      <td>195544.11</td>
-      <td>164402.41</td>
-      <td>31141.70</td>
-    </tr>
-    <tr>
-      <td>832</td>
-      <td>Cuba</td>
-      <td>3</td>
-      <td>14</td>
-      <td>3864705.96</td>
-      <td>3571459.67</td>
-      <td>91808.82</td>
-      <td>77145.44</td>
-      <td>14663.38</td>
-    </tr>
-    <tr>
-      <td>833</td>
-      <td>Germantown</td>
-      <td>5</td>
-      <td>25</td>
-      <td>8102693.72</td>
-      <td>7477390.69</td>
-      <td>197199.12</td>
-      <td>165933.70</td>
-      <td>31265.42</td>
-    </tr>
-    <tr>
-      <td>834</td>
-      <td>Minier</td>
-      <td>3</td>
-      <td>13</td>
-      <td>3562932.38</td>
-      <td>3269056.04</td>
-      <td>92357.41</td>
-      <td>77663.41</td>
-      <td>14694.00</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 8 columns</p>
 </div>
 
 
@@ -282,7 +216,7 @@ data.head()
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>Oregon</td>
       <td>13</td>
       <td>58</td>
@@ -293,7 +227,7 @@ data.head()
       <td>129938.54</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>Oakwood Hills</td>
       <td>1</td>
       <td>4</td>
@@ -304,7 +238,7 @@ data.head()
       <td>847.69</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>Merrionette Park</td>
       <td>4</td>
       <td>17</td>
@@ -315,7 +249,7 @@ data.head()
       <td>112146.00</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>Ashkum</td>
       <td>2</td>
       <td>8</td>
@@ -326,7 +260,7 @@ data.head()
       <td>8829.44</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>Grandview</td>
       <td>5</td>
       <td>25</td>
@@ -377,7 +311,7 @@ pop = pd.read_csv(path)
 path = './data/population.csv'
 pop = pd.read_csv(path)
 
-pop
+pop.head()
 ```
 
 
@@ -408,74 +342,37 @@ pop
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>0</td>
       <td>Champaign</td>
       <td>86,791</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>1</td>
       <td>Carbondale</td>
       <td>25,846</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>2</td>
       <td>Prairie Grove</td>
       <td>1,826</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>3</td>
       <td>Macomb</td>
       <td>18,118</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>4</td>
       <td>Brimfield</td>
       <td>965</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>830</td>
-      <td>830</td>
-      <td>Metamora</td>
-      <td>3,835</td>
-    </tr>
-    <tr>
-      <td>831</td>
-      <td>831</td>
-      <td>Altamont</td>
-      <td>2,260</td>
-    </tr>
-    <tr>
-      <td>832</td>
-      <td>832</td>
-      <td>Fulton</td>
-      <td>3,302</td>
-    </tr>
-    <tr>
-      <td>833</td>
-      <td>833</td>
-      <td>Alorton</td>
-      <td>1,965</td>
-    </tr>
-    <tr>
-      <td>834</td>
-      <td>834</td>
-      <td>East Peoria</td>
-      <td>22,876</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 3 columns</p>
 </div>
 
 
@@ -521,31 +418,31 @@ pop.head()
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>0</td>
       <td>Champaign</td>
       <td>86,791</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>1</td>
       <td>Carbondale</td>
       <td>25,846</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>2</td>
       <td>Prairie Grove</td>
       <td>1,826</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>3</td>
       <td>Macomb</td>
       <td>18,118</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>4</td>
       <td>Brimfield</td>
       <td>965</td>
@@ -568,54 +465,64 @@ pop.drop('Unnamed: 0', axis = 1, inplace = True)
 #__SOLUTION__
 
 pop.drop('Unnamed: 0', axis = 1, inplace = True)
-pop
+pop.head()
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-107-1d13f36d0f35> in <module>
-          1 #__SOLUTION__
-          2 
-    ----> 3 pop.drop('Unnamed: 0', axis = 1, inplace = True)
-          4 pop
 
 
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/core/frame.py in drop(self, labels, axis, index, columns, level, inplace, errors)
-       4100             level=level,
-       4101             inplace=inplace,
-    -> 4102             errors=errors,
-       4103         )
-       4104 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/core/generic.py in drop(self, labels, axis, index, columns, level, inplace, errors)
-       3912         for axis, labels in axes.items():
-       3913             if labels is not None:
-    -> 3914                 obj = obj._drop_axis(labels, axis, level=level, errors=errors)
-       3915 
-       3916         if inplace:
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Municipality</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Champaign</td>
+      <td>86,791</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Carbondale</td>
+      <td>25,846</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Prairie Grove</td>
+      <td>1,826</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Macomb</td>
+      <td>18,118</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Brimfield</td>
+      <td>965</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/core/generic.py in _drop_axis(self, labels, axis, level, errors)
-       3944                 new_axis = axis.drop(labels, level=level, errors=errors)
-       3945             else:
-    -> 3946                 new_axis = axis.drop(labels, errors=errors)
-       3947             result = self.reindex(**{axis_name: new_axis})
-       3948 
-
-
-    ~/opt/anaconda3/envs/keras/lib/python3.7/site-packages/pandas/core/indexes/base.py in drop(self, labels, errors)
-       5338         if mask.any():
-       5339             if errors != "ignore":
-    -> 5340                 raise KeyError("{} not found in axis".format(labels[mask]))
-       5341             indexer = indexer[~mask]
-       5342         return self.delete(indexer)
-
-
-    KeyError: "['Unnamed: 0'] not found in axis"
 
 
 We need to merge our two datasets. 
@@ -673,7 +580,7 @@ markdown(string)
 ```python
 # __SOLUTION__
 df = pd.merge(data, pop, on = 'Municipality')
-df
+df.head()
 ```
 
 
@@ -710,7 +617,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>Oregon</td>
       <td>13</td>
       <td>58</td>
@@ -722,7 +629,7 @@ df
       <td>3,683</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>Oakwood Hills</td>
       <td>1</td>
       <td>4</td>
@@ -734,7 +641,7 @@ df
       <td>2,245</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>Merrionette Park</td>
       <td>4</td>
       <td>17</td>
@@ -746,7 +653,7 @@ df
       <td>2,163</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>Ashkum</td>
       <td>2</td>
       <td>8</td>
@@ -758,7 +665,7 @@ df
       <td>800</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>Grandview</td>
       <td>5</td>
       <td>25</td>
@@ -769,81 +676,8 @@ df
       <td>61872.51</td>
       <td>1,453</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>830</td>
-      <td>East Peoria</td>
-      <td>26</td>
-      <td>111</td>
-      <td>52001103.85</td>
-      <td>47625215.85</td>
-      <td>1377742.74</td>
-      <td>1158937.72</td>
-      <td>218805.02</td>
-      <td>22,876</td>
-    </tr>
-    <tr>
-      <td>831</td>
-      <td>Hillcrest</td>
-      <td>1</td>
-      <td>5</td>
-      <td>8276176.37</td>
-      <td>7653443.96</td>
-      <td>195544.11</td>
-      <td>164402.41</td>
-      <td>31141.70</td>
-      <td>1,265</td>
-    </tr>
-    <tr>
-      <td>832</td>
-      <td>Cuba</td>
-      <td>3</td>
-      <td>14</td>
-      <td>3864705.96</td>
-      <td>3571459.67</td>
-      <td>91808.82</td>
-      <td>77145.44</td>
-      <td>14663.38</td>
-      <td>1,285</td>
-    </tr>
-    <tr>
-      <td>833</td>
-      <td>Germantown</td>
-      <td>5</td>
-      <td>25</td>
-      <td>8102693.72</td>
-      <td>7477390.69</td>
-      <td>197199.12</td>
-      <td>165933.70</td>
-      <td>31265.42</td>
-      <td>1,180</td>
-    </tr>
-    <tr>
-      <td>834</td>
-      <td>Minier</td>
-      <td>3</td>
-      <td>13</td>
-      <td>3562932.38</td>
-      <td>3269056.04</td>
-      <td>92357.41</td>
-      <td>77663.41</td>
-      <td>14694.00</td>
-      <td>1,200</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 9 columns</p>
 </div>
 
 
@@ -894,7 +728,7 @@ In the cell below, set the Municipality column as the index using the ```.set_in
 ```python
 # __SOLUTION__
 df.set_index('Municipality', drop=True, inplace = True)
-df
+df.head()
 ```
 
 
@@ -941,7 +775,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Oregon</td>
+      <th>Oregon</th>
       <td>13</td>
       <td>58</td>
       <td>30182428.57</td>
@@ -952,7 +786,7 @@ df
       <td>3,683</td>
     </tr>
     <tr>
-      <td>Oakwood Hills</td>
+      <th>Oakwood Hills</th>
       <td>1</td>
       <td>4</td>
       <td>216669.74</td>
@@ -963,7 +797,7 @@ df
       <td>2,245</td>
     </tr>
     <tr>
-      <td>Merrionette Park</td>
+      <th>Merrionette Park</th>
       <td>4</td>
       <td>17</td>
       <td>26567816.26</td>
@@ -974,7 +808,7 @@ df
       <td>2,163</td>
     </tr>
     <tr>
-      <td>Ashkum</td>
+      <th>Ashkum</th>
       <td>2</td>
       <td>8</td>
       <td>2289711.66</td>
@@ -985,7 +819,7 @@ df
       <td>800</td>
     </tr>
     <tr>
-      <td>Grandview</td>
+      <th>Grandview</th>
       <td>5</td>
       <td>25</td>
       <td>13713301.51</td>
@@ -995,75 +829,8 @@ df
       <td>61872.51</td>
       <td>1,453</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>East Peoria</td>
-      <td>26</td>
-      <td>111</td>
-      <td>52001103.85</td>
-      <td>47625215.85</td>
-      <td>1377742.74</td>
-      <td>1158937.72</td>
-      <td>218805.02</td>
-      <td>22,876</td>
-    </tr>
-    <tr>
-      <td>Hillcrest</td>
-      <td>1</td>
-      <td>5</td>
-      <td>8276176.37</td>
-      <td>7653443.96</td>
-      <td>195544.11</td>
-      <td>164402.41</td>
-      <td>31141.70</td>
-      <td>1,265</td>
-    </tr>
-    <tr>
-      <td>Cuba</td>
-      <td>3</td>
-      <td>14</td>
-      <td>3864705.96</td>
-      <td>3571459.67</td>
-      <td>91808.82</td>
-      <td>77145.44</td>
-      <td>14663.38</td>
-      <td>1,285</td>
-    </tr>
-    <tr>
-      <td>Germantown</td>
-      <td>5</td>
-      <td>25</td>
-      <td>8102693.72</td>
-      <td>7477390.69</td>
-      <td>197199.12</td>
-      <td>165933.70</td>
-      <td>31265.42</td>
-      <td>1,180</td>
-    </tr>
-    <tr>
-      <td>Minier</td>
-      <td>3</td>
-      <td>13</td>
-      <td>3562932.38</td>
-      <td>3269056.04</td>
-      <td>92357.41</td>
-      <td>77663.41</td>
-      <td>14694.00</td>
-      <td>1,200</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 8 columns</p>
 </div>
 
 
@@ -1079,7 +846,7 @@ Let's sort our index alphabetically using [this](https://pandas.pydata.org/panda
 ```python
 # __SOLUTION__
 df.sort_index(inplace = True)
-df
+df.head()
 ```
 
 
@@ -1126,7 +893,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -1137,7 +904,7 @@ df
       <td>3,452</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -1148,7 +915,7 @@ df
       <td>344</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -1159,7 +926,7 @@ df
       <td>37,089</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -1170,7 +937,7 @@ df
       <td>979</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -1180,75 +947,8 @@ df
       <td>6319.21</td>
       <td>1,184</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1,365</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19,145</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1,836</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24,047</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 8 columns</p>
 </div>
 
 
@@ -1270,7 +970,7 @@ To make things easier on ourselves, let's reformat our column names.
 ```python
 # __SOLUTION__
 df.columns = [x.lower().replace(' ', '_') for x in df.columns]
-df
+df.head()
 ```
 
 
@@ -1317,7 +1017,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -1328,7 +1028,7 @@ df
       <td>3,452</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -1339,7 +1039,7 @@ df
       <td>344</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -1350,7 +1050,7 @@ df
       <td>37,089</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -1361,7 +1061,7 @@ df
       <td>979</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -1371,75 +1071,8 @@ df
       <td>6319.21</td>
       <td>1,184</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1,365</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19,145</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1,836</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24,047</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 8 columns</p>
 </div>
 
 
@@ -1503,7 +1136,7 @@ Our ```population``` column contains commas which is causing the computer to int
 ```python
 #__SOLUTION__
 df.population = df.population.apply(lambda x: int(x.replace(',', '')))
-df
+df.head()
 ```
 
 
@@ -1550,7 +1183,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -1561,7 +1194,7 @@ df
       <td>3452</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -1572,7 +1205,7 @@ df
       <td>344</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -1583,7 +1216,7 @@ df
       <td>37089</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -1594,7 +1227,7 @@ df
       <td>979</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -1604,75 +1237,8 @@ df
       <td>6319.21</td>
       <td>1184</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1365</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19145</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1836</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24047</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 8 columns</p>
 </div>
 
 
@@ -1698,7 +1264,7 @@ Let's create a column that shows the number of gambling terminals per capita!
 ```python
 # __SOLUTION__
 df['terminals_percapita'] = df.terminal_count/df.population
-df
+df.head()
 ```
 
 
@@ -1747,7 +1313,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -1759,7 +1325,7 @@ df
       <td>0.004635</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -1771,7 +1337,7 @@ df
       <td>0.014535</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -1783,7 +1349,7 @@ df
       <td>0.002993</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -1795,7 +1361,7 @@ df
       <td>0.007150</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -1806,81 +1372,8 @@ df
       <td>1184</td>
       <td>0.003378</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1365</td>
-      <td>0.010256</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-      <td>0.012179</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19145</td>
-      <td>0.004283</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1836</td>
-      <td>0.005447</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24047</td>
-      <td>0.001663</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 9 columns</p>
 </div>
 
 
@@ -1919,6 +1412,9 @@ pkl_dump([(
     'highest_machines_percapita'
 )])
 ```
+
+    can"t dump, highest_machines_percapita already exists
+
 
 Run the cell below to see if you identified the correct Municipalities!
 
@@ -1963,7 +1459,7 @@ run_test(highest_machines_percapita, 'highest_machines_percapita')
 ```python
 # __SOLUTION__
 df['amount_lost'] = df.amount_played - df.amount_won
-df
+df.head()
 ```
 
 
@@ -2014,7 +1510,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -2027,7 +1523,7 @@ df
       <td>524149.79</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -2040,7 +1536,7 @@ df
       <td>79396.74</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -2053,7 +1549,7 @@ df
       <td>7861351.11</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -2066,7 +1562,7 @@ df
       <td>175312.21</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -2078,87 +1574,8 @@ df
       <td>0.003378</td>
       <td>126383.59</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1365</td>
-      <td>0.010256</td>
-      <td>425226.14</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-      <td>0.012179</td>
-      <td>200540.93</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19145</td>
-      <td>0.004283</td>
-      <td>2837686.43</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1836</td>
-      <td>0.005447</td>
-      <td>513337.66</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24047</td>
-      <td>0.001663</td>
-      <td>4822290.87</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 10 columns</p>
 </div>
 
 
@@ -2198,7 +1615,7 @@ Let's zoom in on this new loss data.
 ```python
 # __SOLUTION__
 df['loss_percapita'] = df.amount_lost / df.population
-df
+df.head()
 ```
 
 
@@ -2251,7 +1668,7 @@ df
   </thead>
   <tbody>
     <tr>
-      <td>Abingdon</td>
+      <th>Abingdon</th>
       <td>4</td>
       <td>16</td>
       <td>6492446.76</td>
@@ -2265,7 +1682,7 @@ df
       <td>151.839452</td>
     </tr>
     <tr>
-      <td>Addieville</td>
+      <th>Addieville</th>
       <td>1</td>
       <td>5</td>
       <td>939917.34</td>
@@ -2279,7 +1696,7 @@ df
       <td>230.804477</td>
     </tr>
     <tr>
-      <td>Addison</td>
+      <th>Addison</th>
       <td>23</td>
       <td>111</td>
       <td>88623932.26</td>
@@ -2293,7 +1710,7 @@ df
       <td>211.959101</td>
     </tr>
     <tr>
-      <td>Albany</td>
+      <th>Albany</th>
       <td>2</td>
       <td>7</td>
       <td>2030709.60</td>
@@ -2307,7 +1724,7 @@ df
       <td>179.072737</td>
     </tr>
     <tr>
-      <td>Albers</td>
+      <th>Albers</th>
       <td>1</td>
       <td>4</td>
       <td>1546280.29</td>
@@ -2320,93 +1737,8 @@ df
       <td>126383.59</td>
       <td>106.742897</td>
     </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Wyoming</td>
-      <td>4</td>
-      <td>14</td>
-      <td>5175796.61</td>
-      <td>4750570.47</td>
-      <td>134733.65</td>
-      <td>113472.25</td>
-      <td>21261.40</td>
-      <td>1365</td>
-      <td>0.010256</td>
-      <td>425226.14</td>
-      <td>311.520982</td>
-    </tr>
-    <tr>
-      <td>Yates City</td>
-      <td>2</td>
-      <td>9</td>
-      <td>2312753.96</td>
-      <td>2112213.03</td>
-      <td>62885.85</td>
-      <td>52858.72</td>
-      <td>10027.13</td>
-      <td>739</td>
-      <td>0.012179</td>
-      <td>200540.93</td>
-      <td>271.367970</td>
-    </tr>
-    <tr>
-      <td>Yorkville</td>
-      <td>17</td>
-      <td>82</td>
-      <td>34644816.40</td>
-      <td>31807129.97</td>
-      <td>891425.19</td>
-      <td>749532.91</td>
-      <td>141892.28</td>
-      <td>19145</td>
-      <td>0.004283</td>
-      <td>2837686.43</td>
-      <td>148.220759</td>
-    </tr>
-    <tr>
-      <td>Zeigler</td>
-      <td>2</td>
-      <td>10</td>
-      <td>6313807.67</td>
-      <td>5800470.01</td>
-      <td>161690.11</td>
-      <td>136023.12</td>
-      <td>25666.99</td>
-      <td>1836</td>
-      <td>0.005447</td>
-      <td>513337.66</td>
-      <td>279.595675</td>
-    </tr>
-    <tr>
-      <td>Zion</td>
-      <td>8</td>
-      <td>40</td>
-      <td>55554420.63</td>
-      <td>50732129.76</td>
-      <td>1519326.98</td>
-      <td>1278211.05</td>
-      <td>241115.93</td>
-      <td>24047</td>
-      <td>0.001663</td>
-      <td>4822290.87</td>
-      <td>200.536070</td>
-    </tr>
   </tbody>
 </table>
-<p>835 rows × 11 columns</p>
 </div>
 
 
@@ -2442,6 +1774,9 @@ pkl_dump([(
 )])
 ```
 
+    can"t dump, highest_loss_percapita already exists
+
+
 Run the cell below to see if you idenitified the correct municipalities!
 
 
@@ -2455,6 +1790,12 @@ run_test(highest_loss_percapita, 'highest_loss_percapita')
     'Hey, you did it.  Good job.'
 
 
+
+
+```python
+# __SOLUTION__
+run_test(highest_loss_percapita, 'highest_loss_percapita')
+```
 
 <u>In the cell below:</u>
 1. Filter our dataframe to contain municipalities with a ```loss_percapita``` of 406 or greater. 
@@ -2510,6 +1851,9 @@ pkl_dump([
 ])
 ```
 
+    can"t dump, high_loss_average_population already exists
+
+
 Run the cell below to see if you identified the correct averages!
 
 
@@ -2532,6 +1876,10 @@ print(f'high loss test result: {high_result}')
 print
 print(f'low loss test result: {low_result}')
 ```
+
+    high loss test result: Hey, you did it.  Good job.
+    low loss test result: Hey, you did it.  Good job.
+
 
 
 ```python
